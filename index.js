@@ -1,4 +1,4 @@
-const config = require('config.json');
+const config = require("./config.json");
 const VkBot = require('node-vk-bot-api');
 const fs = require("fs");
 const bot = new VkBot(config.token);
