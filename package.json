@@ -1,0 +1,23 @@
+{
+  "name": "nikitabot",
+  "version": "1.0.0",
+  "description": "\"# NikitaBot\"",
+  "main": "index.js",
+  "dependencies": {
+    "node-vk-bot-api": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirokiro5/NikitaBot.git"
+  },
+  "author": "mirokiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirokiro5/NikitaBot/issues"
+  },
+  "homepage": "https://github.com/mirokiro5/NikitaBot#readme"
+}
