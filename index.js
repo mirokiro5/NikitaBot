@@ -1,8 +1,13 @@
 const config = require("./config.json");
+const io = require('@pm2/io')
 const VkBot = require('node-vk-bot-api');
 const fs = require("fs");
 const bot = new VkBot(config.token);
 const msgcount=require("./msgcount.json");
+
+const messagecount = io.metric({
+  name: 'Message Count'
+})
 
 bot.command('/count', (ctx) => {
   if([2,3,4].indexOf(msgcount.count%10)+1){
@@ -16,6 +21,7 @@ bot.event("message_new", (ctx) => {
     msg=ctx.message.text;
     if(msg.includes('🗿')){
       msgcount.count++;
+      messagecount.set(msgcount.count);
       fs.writeFileSync("msgcount.json", JSON.stringify(msgcount));
       switch(msgcount.count){
         case '50':
